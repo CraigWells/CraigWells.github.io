@@ -1,0 +1,7 @@
+CSS sample resizeable templates
+
+Usecase - View template
+
+1. Land on CSS Home page.
+2. Select a style.
+3. View page

@@ -1,0 +1,13 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# level 1
+RewriteRule ^home$ index.html
+RewriteRule ^about$ about.html
+RewriteRule ^projects$ projects.html
+RewriteRule ^about$ about.html
+RewriteRule ^resources$ resources.html
+RewriteRule ^patterns$ patterns.html
+RewriteRule ^blog$ blog.html
+RewriteRule ^contact$ contact.html

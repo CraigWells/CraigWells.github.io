@@ -1,0 +1,395 @@
+
+/*-------------------------
+	4TH SCREEN SIZE
+--------------------------*/
+
+@media only screen and (min-width: 1227px){
+
+	hr{
+		width: 100%;
+	}
+
+	#content{		
+		display:inline-block;
+		width: 100%;
+		margin-bottom:364px;
+	}
+
+	#cw-text{
+		float:left;
+		width:25em;
+		line-height: 5em;
+		font-family: 'bebasneue';
+		margin-top: 0.5em;
+		margin-left:1em;
+	}
+
+	.craig-holder, .wells-holder{
+		padding-top: 0.2em;
+		display:inline-block;
+		font-size: 6em;
+	}
+	
+	.icons-container{
+		padding: 1.7em 1.7em 0 0;
+		float:right;
+	}
+
+	#three-lines{display:none;}
+
+	nav{padding-top: 1.7em;}
+
+	nav ul{	
+		float:left;
+		width:44em;
+		background-color:#2D5161;
+		box-shadow:0 1px 1px #ccc;
+		border-radius:2px;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+
+	nav ul li { display: inline; }
+
+	a.nav-link{
+		display:inline-block;
+		padding: 0.5em 1.4em 0.5em 1.4em;
+		color:#fff !important;
+		font-weight:bold;
+		text-decoration:none !important;
+		line-height:0.5;
+		letter-spacing: 2px;
+		font:15px/1.3 'Open Sans', sans-serif;
+		-webkit-transition:background-color 0.25s;
+		-moz-transition:background-color 0.25s;
+		transition:background-color 0.25s;
+	}
+
+	a.nav-link:first-child{
+		border-radius:2px 0 0 2px;
+	}
+
+	a.nav-link:last-child{
+		border-radius:0 2px 2px 0;
+	}
+
+	a.nav-link:hover{
+		background-color: #1D3C49;
+	}
+
+	#nav-items{display:block !important;}
+
+	#nav-items.home li.home a,
+	#nav-items.projects li.projects a,
+	#nav-items.services li.services a,
+	#nav-items.contact li.contact a,
+	#nav-items.blog li.blog a,
+	#nav-items.features li.features a,
+	#nav-items.about li.about a{
+		background-color:#3E7C97;
+	}
+
+	#features-dropdown{
+		z-index: 999999;
+		display:none;
+		position: fixed;
+		background-color: rgb(252, 252, 252);
+		list-style-type:none;
+		line-height: 2.5em;
+		padding-bottom: 1em;
+		padding-top: 1em;
+		border: 1px solid #ABBCC4;
+		width: 12em;
+		margin-left: 294px;
+		font-size:15px !important;
+	}
+
+	#features-text{display: inline-block; line-height: 0.65em;}
+
+	#feature-text{float:left;}
+
+	#down-icon{float:right;}
+
+	#page-content{
+		float:left;
+		width:100%;
+	}
+
+	#footer{
+		font-size:15px !important;
+		letter-spacing:2px;
+	}
+
+	/* -- index content -- */
+
+	#index-content, #projects-content{
+		margin: 0 1.2em 0 1.2em;
+	}
+
+	.quote-header{
+		background-color: black;
+		font-size: 1.4em;
+		color: #808080;
+	}
+
+	#quote-holder{
+		text-align: center;
+		font-size: 1.2em;
+		line-height: 1.8;
+		padding: 1em 10em 1em 10em;
+	}
+
+	blockquote {
+		font-family: Georgia, serif;
+		font-size: 18px;
+		font-style: italic;
+		margin: 0.25em 0;
+		padding: 0.35em 40px;
+		line-height: 1.45;
+		position: relative;
+		color: #383838;
+	}
+
+	blockquote:before {
+		display: block;
+		padding-left: 10px;
+		content: "\201C";
+		font-size: 80px;
+		position: absolute;
+		left: -20px;
+		top: -20px;
+		color: #7a7a7a;
+	}
+
+	blockquote cite {
+		color: #999999;
+		font-size: 14px;
+		display: block;
+		margin-top: 5px;
+	}
+	 
+	blockquote cite:before {
+		content: "\2014 \2009";
+	}
+
+	#block-holder{
+		width: 78%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 2.4em;
+		display: block;
+	}
+
+	.category-wrapper{
+		float:left;
+		width:25%;
+		margin-bottom: 2em;
+	}
+
+	.category-block{
+		border: 3px solid white;
+		color: white;
+		font-family: 'bebasneue';
+		font-size: 1.8em;
+		letter-spacing: 0.08em;
+		width: 99%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #3E7C97;
+		text-align: center;
+	}
+
+	.category-image{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 36%;
+		padding-top: 0.8em;
+		padding-bottom: 0.8em;
+	}
+
+	.text-block{
+		width: 90%;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.category-links{
+		color:#5e5b64;
+	}
+
+	#latest-content-holder{
+		float: left;
+		width: 100%;
+	}
+
+	.latest-section-wrapper{
+		margin-top: 2.2em;
+		width: 78%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 1.8em;
+	}
+	
+	#top-link-wrapper{
+		margin-top: 2em;
+		font:15px/1.3 'Open Sans', sans-serif;
+		text-align: center;
+		color: #5e5b64;
+	}
+
+	.latest-title{
+		width:100%;
+		text-decoration: none;
+		font-size: 1.8em;
+		color: #2D5161;
+		font-family: 'bebasneue';		
+	}
+
+	.latest-h2{
+		width:100%;
+		text-decoration: none;
+		margin-top: 0.5em;
+		font-size: 1.45em;
+		color: #5e5b64;
+		display: block;
+	}
+
+	.latest-p{
+		line-height: 1.6;
+		padding-top: 1em;
+		padding-bottom: 0.3em;	
+		text-align: justify;	
+	}
+
+	.decoration-none{
+		text-decoration: none;
+	}
+
+	#inner-left{
+		float: left;
+		width: 52%;
+		margin-right: 8%;
+		margin-bottom: 2em;
+	}
+
+	#inner{
+		float: left;
+		width: 100%;
+		margin-right: 8%;
+		margin-bottom: 2em;
+	}
+
+	.proxy-image{
+		display: inline-block;
+		padding-top: 2em;
+	}
+
+	#pattern-image{
+		display: inline-block;
+		width: 40%;
+	}
+
+	.tools-image{
+		display: inline-block;
+		padding-top: 3em;
+		width: 15em;
+		margin-left: 5em;
+		margin-bottom: 2.4em;
+	}
+
+	/* Projects */
+
+	#projects-content{
+		margin: 0 auto;
+		width: 1000px;
+	}
+
+	.square{
+		min-height: 180px;
+		min-width: px;
+		background-color: black;
+		width: 250px;
+		height: 180px;
+		float: left;
+		color:white;
+	}
+
+	#weather{
+	}
+
+	#backgrounds{
+	}
+
+	/* About */
+
+	#about-content{
+		float:left;
+		width:100%;
+	}
+
+	#profile-photo-holder{
+		float: left;
+		width: 21%;
+	}
+
+	#profile-text-holder{
+		float: left;
+		width: 79%;
+		height: 200px;
+		background-color: yellow;
+	}
+
+	#profile-photo{
+		height: 200px;
+		width: 200px;
+		background-color: black;
+		float: right;
+	}
+
+	#profile-text{
+		float: left;
+		margin-left: 4em;
+	}
+
+	.section{
+		display: inline-block;
+		width: 100%;
+		background-color: green;
+		color: white;
+	}
+
+	#skills-matrix{
+		width: 800px;
+		height: 200px;
+		background-color: orange;
+	}
+
+	.section-content{
+		margin: 0 auto;
+		width: 800px;
+	}
+
+	.icons-content{
+		margin: 0 auto;
+		width: 918px;
+	}
+
+	.text-center{
+		text-align: center;
+	}
+
+	.icon{
+		height: 100px;
+		width: 100px;
+		background-color: black;
+		float: left;
+		border: 1px solid white;
+	}
+
+}

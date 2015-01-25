@@ -1,0 +1,294 @@
+/*-------------------------
+	SMALLEST SCREEN SIZE
+--------------------------*/
+
+@media only screen and (max-width: 641px){
+
+	hr{
+		width: 99%;
+	}
+
+	.quote-header{
+		background-color: #404040;
+		color:#B8B8B8;
+		font-size: 1.2em;
+	}
+
+	#content {
+		font-size:12px !important;
+		display:inline-block;
+		width: 100%;
+		text-align: center;
+		margin-bottom:340px;
+	}
+
+	#cw-text{
+		width:14em;
+		margin:0px auto;
+		line-height: 4em;
+		font-family: 'bebasneue';
+	}
+
+	.craig-holder, .wells-holder{
+		padding-top: 0.2em;
+		display:inline-block;
+		font-size: 3.6em;
+	} 
+
+	.icons-container{
+		display:inline-block;
+		margin:0 auto;
+	}
+
+	#three-lines{
+		display:inline-block;
+		margin: 0.5em 0 0.2em 0;
+		font-size: 4em;
+		line-height: 0.4em;		
+		height: 0.6em;
+		color: #2D5161;
+	}
+
+	#three-lines a{
+		text-decoration: none;
+		color:#2D5161;
+	}
+
+	nav{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	ul#nav-items{
+		display:none;
+		list-style-type: none;
+		line-height: 1.8em;
+		margin: 0 auto;
+		letter-spacing:2px;
+	}
+
+	li.nav-item{
+		text-align: center;
+		background-color: #2D5161;
+		border: 1px solid white;
+		padding: 0.1em 0.5em;
+	}
+
+	li.nav-item a{		
+		text-decoration:none;
+		color:white;
+	}	
+
+	ul#features-dropdown{
+		display:none;
+		list-style: none;
+	}
+
+	li.nav-item:hover{
+		background-color: #1D3C49;
+	}
+
+	#feature-text{
+		display:none;
+	}
+
+	.resources{
+		margin: 0.6em 0 0.3em 0;
+	}
+
+	.patterns{
+		margin: 0.3em 0 0.6em 0;
+	}
+
+	p.tick{ display: inline; }
+
+	#nav-items.home li.home,
+	#nav-items.projects li.projects,
+	#nav-items.services li.services,
+	#nav-items.contact li.contact,
+	#nav-items.blog li.blog,
+	#nav-items.features li.features,
+	#nav-items.about li.about{
+		background-color:#3E7C97;
+	}
+
+	#footer{font-size:12px !important;}
+
+	/* -- Index Content -- */
+
+	#quote-holder{
+		width: 96%;
+		margin: 2em auto;
+	}
+
+	blockquote {
+		text-align: center;
+		font-family: Georgia, serif;
+		font-size: 14px;
+		font-style: italic;
+		margin: 0.25em 0 0 1em;
+		padding: 0.35em 40px;
+		line-height: 1.45;
+		position: relative;
+		color: #383838;
+	}
+
+	blockquote:before {
+		display: block;
+		padding-left: 10px;
+		content: "\201C";
+		font-size: 80px;
+		position: absolute;
+		left: -20px;
+		top: -20px;
+		color: #7a7a7a;
+	}
+
+	blockquote cite {
+		color: #999999;
+		font-size: 14px;
+		display: block;
+		margin-top: 5px;
+	}
+	 
+	blockquote cite:before {
+		content: "\2014 \2009";
+	}
+
+	#block-holder{
+		width: 78%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 1em;
+		display: block;
+	}
+
+	.category-wrapper{
+		font-size: 1em;
+		float:left;
+		width:100%;
+		margin-bottom: 0.5em;
+	}
+
+	.category-block{
+		border: 3px solid white;
+		float: left;
+		color: white;
+		font-family: 'bebasneue';
+		font-size: 1.75em;
+		letter-spacing: 0.08em;
+		width: 100%;
+		background-color: #3E7C97;
+		text-align: center;
+	}
+
+	.category-image{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 3em;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+
+	.text-block{
+		width: 90%;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 14px;
+		padding-bottom: 0.5em;
+	}
+
+	.category-links{
+		color:#5e5b64;
+	}
+
+	#latest-content-holder{
+		float: left;
+		width: 100%;
+	}
+
+	.latest-section-wrapper{
+		color: #2D5161;
+		margin-top: 1.6em;
+		width: 90%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 1.8em;
+		text-align: center;
+	}
+	
+	#top-link-wrapper{
+		margin-top: 1.4em;
+		font:15px/1.3 'Open Sans', sans-serif;
+		text-align: center;
+		color: #5e5b64;
+	}
+
+	.latest-title{
+		width:100%;
+		text-decoration: none;
+		font-size: 1.4em;
+		color: #2D5161;
+		font-family: 'bebasneue';		
+	}
+
+	.latest-h2{
+		width:100%;
+		text-decoration: none;
+		margin-top: 0.5em;
+		font-size: 1.2em;
+		color: #5e5b64;
+		display: block;
+	}
+
+	.latest-p{
+		line-height: 1.6;
+		padding-top: 1em;
+		padding-bottom: 0.3em;	
+		text-align: center;	
+	}
+
+	.decoration-none{
+		text-decoration: none;
+	}
+
+	#inner{
+		float: left;
+		width: 100%;
+		margin-right: 6%;
+		margin-bottom: 2em;
+	}
+
+
+	#inner-left{
+		float: left;
+		width: 100%;
+		margin-right: 6%;
+	}
+
+	.proxy-image{
+		display: inline-block;
+		padding-top: 4em;
+		width: 20em;
+	}
+
+	#pattern-image{
+		display: inline-block;
+		width: 40%;
+	}
+
+	.tools-image{
+		display: inline-block;
+		padding-top: 0.5em;
+		width: 40%;
+		margin-left: 8%;
+		margin-top: 4%;
+	}
+
+	#footer{
+		height:250px;
+	}
+
+}
