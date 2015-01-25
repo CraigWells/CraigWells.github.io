@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <!--link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--link href="theme.css" rel="stylesheet"-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <div class="container theme-showcase" role="main">
+
+    <h1>Technology News Feeds</h1><br/>
+
+      <ul class="nav nav-tabs">
+          <li class="active"><a href="#bbc-tab" data-toggle="tab" class="bbc">BBC <i class="fa"></i></a></li>
+          <li><a href="#cnnspace-tab" data-toggle="tab" class="cnnspace">CNN Space <i class="fa"></i></a></li>
+          <li><a href="#cnntech-tab" data-toggle="tab" class="cnntech">CNN Technology <i class="fa"></i></a></li>
+          <li><a href="#dailytech-tab" data-toggle="tab" class="dailytech">Daily Tech <i class="fa"></i></a></li>
+          <li><a href="#reuters-tab" data-toggle="tab" class="reuters">Reuters <i class="fa"></i></a></li>
+          <li><a href="#wired-tab" data-toggle="tab" class="wired">Wired <i class="fa"></i></a></li>
+      </ul>
+
+      <form id="accountForm" method="post" class="form-horizontal">
+      <br/>
+      	<img src="images/loading.gif" class="loading" style="display:none"/>
+          <div class="tab-content">
+              <div class="tab-pane active" id="bbc-tab">
+           	  		<div id="bbc-content"></div>
+              </div>
+              <div class="tab-pane" id="cnnspace-tab">
+              		<div id="cnnspace-content"></div>
+              </div>
+              <div class="tab-pane" id="cnntech-tab">
+                    <div id="cnntech-content"></div>
+              </div>
+              <div class="tab-pane" id="dailytech-tab">
+                    <div id="dailytech-content"></div>
+              </div>
+              <div class="tab-pane" id="reuters-tab">
+                    <div id="reuters-content"></div>
+              </div>   
+              <div class="tab-pane" id="wired-tab">
+                    <div id="wired-content"></div>
+              </div>             
+          </div>
+      </form>
+
+    </div> <!-- /container -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/xml2json.js"></script>
+    <script src="js/feedscontroller.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+.black{
+	background-color: black;
+}
+.white{
+	background-color: white;
+}
+.red{
+	background-color: red;
+}
+.green{
+	background-color: green;
+}
+
+.binding-dark{
+	background-image:url('../images/backgrounds/binding_dark.png');
+	background-repeat:repeat;
+}
+
+.grey-wash-wall{
+	background-image:url('../images/backgrounds/grey_wash_wall.png');
+	background-repeat:repeat;
+}
+
+.escheresque-dark{
+	background-image:url('../images/backgrounds/escheresque_dark.png');
+	background-repeat:repeat;
+}
+
+.satinweave{
+	background-image:url('../images/backgrounds/satinweave.png');
+	background-repeat:repeat;
+}
+
+.honey-im-subtle{
+	background-image:url('../images/backgrounds/honey_im_subtle.png');
+	background-repeat:repeat;
+}
+
+.retina-wood{
+	background-image:url('../images/backgrounds/retina_wood.png');
+	background-repeat:repeat;
+}
+
+.tiny-grid{
+	background-image:url('../images/backgrounds/tiny_grid.png');
+	background-repeat:repeat;
+}
+
+.horror{
+	background-image:url('../images/backgrounds/horror.png');
+	background-repeat:repeat;
+}
+
+
+.blue-gradient{
+	background: -webkit-linear-gradient(#66CCCC, white); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#66CCCC, white); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#66CCCC, white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#66CCCC, white); /* Standard syntax (must be last) */
+
+	background-repeat: no-repeat;
+}
+
+#red{
+	min-height:300px;
+	min-width: 300px;
+}
+
+#background-name{
+	font-family: times;
+	font-size: 52px;
+	margin-left: 2%;
+	margin-top: 2%;
+}
