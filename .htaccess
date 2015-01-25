@@ -2,8 +2,6 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# level 1
-<<<<<<< HEAD
 RewriteRule ^home$ index.html
 RewriteRule ^about$ about.html
 RewriteRule ^projects$ projects.html
@@ -12,20 +10,3 @@ RewriteRule ^resources$ resources.html
 RewriteRule ^patterns$ patterns.html
 RewriteRule ^blog$ blog.html
 RewriteRule ^contact$ contact.html
-=======
-RewriteRule ^index$ index.html
-RewriteRule ^contact$ contact.html
-
-# projects
-RewriteRule ^projects/weather$ projects/weather/index.html
-RewriteRule ^projects/weather/info$ projects/weather/info.html
-
-RewriteRule ^projects/news-feeds$ projects/news-feeds/index.html
-RewriteRule ^projects/news-feeds/info$ projects/news-feeds/info.html
-
-RewriteRule ^projects/google-charts$ projects/google-charts/index.html
-RewriteRule ^projects/google-charts/info$ projects/google-charts/info.html
-
-RewriteRule ^projects/backgrounds$ projects/backgrounds/index.html
-RewriteRule ^projects/backgrounds/info$ projects/backgrounds/info.html
->>>>>>> 163b40983061f75f71e68adb6c4498eef5734e57
