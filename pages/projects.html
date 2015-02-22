@@ -1,0 +1,26 @@
+<div id="projects-content">
+	<div id="quote-holder">
+		<blockquote>
+			I'm Craig, welcome to my Portfolio / Web Scrapbook. This is where I keep <a href="./features/tools">links</a> to useful and sometimes interesting development based stuff, where I <a href="./blog">blog</a> about Tech and show off my own <a href="./projects">experiments</a>. Feel free to make yourself at home, and if you like my work, why not get in <a href="./contact">touch</a>?
+			<cite>Craig Wells</cite>
+		</blockquote>
+	</div>
+	<hr class="top">
+	<div ng-repeat="project in projects">
+		<div class="project-wrapper">
+			<div class="project-image-left">
+				<img src="{{project.imgSrc}}" class="project-image"/>
+			</div>
+			<div class="project-content">
+				<a href="{{project.link}}" class="latest-title" target="_blank">{{project.title}}</a>
+				<a href="{{project.link}}" class="latest-h2" target="_blank">{{project.subHeading}}</a>
+				<p class="latest-p">{{project.textContent}}<a class="decoration-none" href="{{project.link}}" target="_blank">{{project.linkText}}</a></p>
+			</div>	
+		</div>
+		<hr>
+	</div>
+	<!-- Back to top of page -->
+	<div id="top-link-wrapper">
+		<a class="page-top-link" href="" ng-click="reloadPage()">Back to the top &#8679;</a>
+	</div>	
+</div>	

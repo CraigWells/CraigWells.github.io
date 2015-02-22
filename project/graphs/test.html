@@ -1,0 +1,239 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>Resizable D3 Charts</title>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="chart-container">
+        <svg class="chart"></svg>
+    </div><!-- /.container -->
+    <div class="graph-container">
+        <svg id="graph"></svg>
+    </div><!-- /.container -->
+</body>
+<!-- ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="d3.min.js"></script>
+
+<script>
+function barChart(){
+
+    var d3Chart = d3;
+
+    var margin = {top: 20, right: 20, bottom: 20, left: 20},
+      width = parseInt(d3Chart.select(".chart").style("width")) - margin.left - margin.right,
+      height = parseInt(d3Chart.select(".chart").style("height")) - margin.top - margin.bottom;  
+
+    var x = d3Chart.scale.ordinal()
+        .rangeRoundBands([0, width], .1);
+
+    var y = d3Chart.scale.linear()
+        .range([height, 0]);
+
+    var xAxis = d3Chart.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    var yAxis = d3Chart.svg.axis()
+        .scale(y)
+        .orient("left");
+
+    var chart = d3Chart.select(".chart")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3Chart.tsv("tab_values.tsv", type, function(error, data) {
+      x.domain(data.map(function(d) { return d.name; }));
+      y.domain([0, d3Chart.max(data, function(d) { return d.value; })]);
+
+      chart.append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis);
+
+      chart.append("g")
+          .attr("class", "y axis")
+          .call(yAxis);
+
+      chart.selectAll(".bar")
+          .data(data)
+        .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x", function(d) { return x(d.name); })
+          .attr("y", function(d) { return y(d.value); })
+          .attr("height", function(d) { return height - y(d.value); })
+          .attr("width", x.rangeBand());
+
+    function resizeChart(){
+      console.log("Barchart");
+      var width = parseInt(d3Chart.select(".chart").style("width")) - (margin.left + margin.right)*2,
+      height = parseInt(d3Chart.select(".chart").style("height")) - (margin.left + margin.right)*2;
+
+      // Update the range of the scale with new width/height //
+      // UNSURE HERE
+      x.rangeRoundBands([0, width], .1);
+      y.range([height, 0]); 
+
+      // Update the axis with the new scale //
+      chart.select('.x.axis')
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+      chart.select('.y.axis')
+        .call(yAxis);  
+
+      chart.selectAll(".bar")
+        .attr("x", function(d) { return x(d.name); })
+        .attr("y", function(d) { return y(d.value); })
+    .attr("height", function(d) { return height - y(d.value); })
+        .attr("width", x.rangeBand());    }  
+
+    d3Chart.select(window).on('resize.chart', resizeChart);
+
+    //resizeChart();
+    }); 
+
+  function type(d) {
+    d.value = +d.value; // coerce to number
+  return d;
+  }; 
+
+  return {
+    resize : function(callback){resizeChart();callback();}
+  };   
+
+};
+
+function lineGraph(){
+
+  var d3Graph = d3;
+
+  var graphMargin = {top: 20, right: 20, bottom: 20, left: 20},
+      graphWidth = parseInt(d3Graph.select(".chart").style("width")) - (graphMargin.left - graphMargin.right)*2,
+      graphHeight = parseInt(d3Graph.select(".chart").style("height")) - (graphMargin.top - graphMargin.bottom)*2;
+
+  var xScale = d3Graph.time.scale()
+      .range([0, graphWidth])
+      .nice(d3Graph.time.year);
+
+  var yScale = d3Graph.scale.linear()
+      .range([graphHeight, 0])
+      .nice();
+
+  var xAxis = d3Graph.svg.axis()
+      .scale(xScale)
+      .orient("bottom");
+
+  var yAxis = d3Graph.svg.axis()
+      .scale(yScale)
+      .orient("left");
+
+  var line = d3Graph.svg.line()
+      .x(function(d) { return xScale(d.date); })
+      .y(function(d) { return yScale(d.close); });
+
+  var graph = d3Graph.select("#graph")
+      .attr("width", graphWidth + graphMargin.left + graphMargin.right)
+      .attr("height", graphHeight + graphMargin.top + graphMargin.bottom)
+
+    .append("g")
+      .attr("transform", "translate(" + (graphMargin.left + graphMargin.right) +"," + (graphMargin.left + graphMargin.right) + ")");
+
+  d3Graph.csv("amzn.csv", function(error, data) {
+    data.forEach(function(d) {
+      d.date = d3Graph.time.format("%Y-%m-%d").parse(d.date);
+      d.close = +d.close;
+    });
+
+    xScale.domain(d3Graph.extent(data, function(d) { return d.date; }));
+    yScale.domain(d3Graph.extent(data, function(d) { return d.close; }));
+
+    graph.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + graphHeight + ")")
+        .call(xAxis);
+
+    graph.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Price ($)");
+
+    graph.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("d", line);
+
+    function resizeGraph() {
+      console.log("Line graph");
+      var graphWidth = parseInt(d3Graph.select("#graph").style("width")) - (graphMargin.left + graphMargin.right)*2,
+      graphHeight = parseInt(d3Graph.select("#graph").style("height")) - (graphMargin.left + graphMargin.right)*2;
+
+      // Update the range of the scale with new width/height //
+      xScale.range([0, graphWidth]).nice(d3Graph.time.year);
+      yScale.range([graphHeight, 0]).nice();
+
+      // Update the axis with the new scale //
+      graph.select('.x.axis')
+        .attr("transform", "translate(0," + graphHeight + ")")
+        .call(xAxis);
+
+      graph.select('.y.axis')
+        .call(yAxis);
+  
+      // Force D3 to recalculate and update the line //
+      graph.selectAll('.line')
+        .attr("d", line);
+    }
+
+    d3Graph.select(window).on('resize.graph', resizeGraph); 
+
+    resizeGraph();
+  });
+
+  return {
+    resize : function(){resizeGraph();}
+  };
+};
+
+function addEvent(elem, type, eventHandle) {
+    if (elem == null || typeof(elem) == 'undefined') return;
+    if ( elem.addEventListener ) {
+        elem.addEventListener( type, eventHandle, false );
+    } else if ( elem.attachEvent ) {
+        elem.attachEvent( "on" + type, eventHandle );
+    } else {
+        elem["on"+type]=eventHandle;
+    }
+};
+
+function resize(){
+  barchart.resize(linegraph.resize);
+}
+
+var linegraph = lineGraph();
+var barchart = barChart();
+
+//addEvent(window, "resize", resize());
+
+</script>
+
+</html>

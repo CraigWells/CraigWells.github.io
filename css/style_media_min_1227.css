@@ -305,19 +305,29 @@
 
 	/* Projects */
 
-	#projects-content{
-		margin: 0 auto;
-		width: 1000px;
+	.project-wrapper{
+		margin-top: 1.8em;
+		width: 78%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 1.4em;
 	}
 
-	.square{
-		min-height: 180px;
-		min-width: px;
-		background-color: black;
-		width: 250px;
-		height: 180px;
-		float: left;
-		color:white;
+	.project-image-left{
+		display:inline-block;
+		width: 36%;
+	}
+
+	.project-content{
+		display:inline-block;
+		vertical-align: top;
+		width: 62%;
+	}
+
+	.project-image{
+		height:200px;
+		width:340px;
 	}
 
 	#weather{

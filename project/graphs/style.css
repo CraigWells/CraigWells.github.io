@@ -1,0 +1,61 @@
+/* ----- BAR CHART ----- */
+.chart-container{
+  display:block;
+  width:80%;
+  margin-top: 5%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.chart-container .axis text {
+  font: 10px sans-serif;
+}
+
+.chart-container .axis path,
+.chart-container .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.chart-container .x.axis path {
+  display: none;
+}
+
+.chart-container .chart {
+  width: 100%;
+  height: 70%;
+}
+
+/* ----- LINE GRAPH ----- */
+.graph-container{
+  display:block;
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.graph-container .line {
+  fill: none;
+  stroke: #ef0d0c;
+  stroke-width: 1.5px;
+}
+
+.graph-container .axis path,
+.graph-container .axis line {
+  fill: none;
+  stroke: #555;
+  shape-rendering: crispEdges;
+}
+
+.graph-container #graph {
+  width: 100%;
+  height: 70%;
+}

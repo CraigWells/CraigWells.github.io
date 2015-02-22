@@ -3,10 +3,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 @font-face {
     font-family: 'bebasneue';
-	src: url('../includes/fonts/BebasNeue/bebasneue.eot?') format('eot'), 
-		 url('../includes/fonts/BebasNeue/bebasneue.woff') format('woff'), 
-		 url('../includes/fonts/BebasNeue/bebasneue.ttf') format('truetype'), 
-		 url('../includes/fonts/BebasNeue/bebasneue.svg#webfont') format('svg'); 
+	src: url('fonts/BebasNeue/bebasneue.eot?') format('eot'), 
+		 url('fonts/BebasNeue/bebasneue.woff') format('woff'), 
+		 url('fonts/BebasNeue/bebasneue.ttf') format('truetype'), 
+		 url('fonts/BebasNeue/bebasneue.svg#webfont') format('svg'); 
 		 font-weight: normal;
 		 font-style: normal;
 }
@@ -57,7 +57,7 @@ body {
 	left:0;
 	width:100%;
 	color:white;
-	background-image:url('../includes/images/backgrounds/binding_dark.png');
+	background-image:url('../images/binding_dark.png');
 	background-repeat:repeat;
 	padding: 2em 0 1em 0;
 	letter-spacing:1px;
@@ -108,4 +108,8 @@ body {
 #footer-icons, #footer-name{
 	float:right;
 	margin-right: 2em;
+}
+
+.template-holder{
+	float:left;
 }

@@ -1,11 +1,13 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^home$ index.html
-RewriteRule ^about$ about.html
-RewriteRule ^about$ about.html
-RewriteRule ^resources$ resources.html
-RewriteRule ^patterns$ patterns.html
-RewriteRule ^blog$ blog.html
-RewriteRule ^contact$ contact.html
+# Don't rewrite files or directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite everything else to index.html to allow html5 state links
+RewriteRule ^ index.html [L]
+RewriteRule $project/backgrounds projects/backgrounds
+RewriteRule $project/weather projects/weather
+RewriteRule $project/skillschart projects/skillschart
+RewriteRule $project/graphs projects/graphs
