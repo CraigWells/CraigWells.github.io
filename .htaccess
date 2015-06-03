@@ -11,4 +11,8 @@ RewriteRule $project/backgrounds projects/backgrounds
 RewriteRule $project/weather projects/weather
 RewriteRule $project/skillschart projects/skillschart
 RewriteRule $project/graphs projects/graphs
+<<<<<<< HEAD
 RewriteRule $project/d3 projects/d3
+=======
+RewriteRule $project/d3 projects/d3
+>>>>>>> 82b2466bbc932c162cc325e37ee5459c0093e580
