@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="portfolioApp" ng-controller="mainController">
+<head>
+	<meta charset="utf-8">
+	<title data-ng-bind="page.title"></title>
+	<meta name="description" content="Craig Wells Javascript | Web Developer ">
+	<meta name="author" content="Craig Wells">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<base href="http://craigwells.xyz/"></base>
+	<link rel="stylesheet" href="css/default_style.css">
+	<link rel="stylesheet" href="css/style_media_max_641.css">
+	<link rel="stylesheet" href="css/style_media_max_950.css">
+	<link rel="stylesheet" href="css/style_media_max_1226.css">
+	<link rel="stylesheet" href="css/style_media_min_1227.css">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  	<script src="script.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div id="header">
+				<h1 class="quote-header">Javascript | Web Developer</h1>
+				<a href="">
+					<div id="cw-text">
+						<div class="craig-holder">
+							<h1 class="craig">Craig</h1>
+						</div>
+						<div class="wells-holder">
+							<h1 class="wells">Wells</h1>
+						</div>
+					</div>
+				</a>
+				<div id="social-media-bar">
+						<div class="icons-container">
+							<a class="facebook-icon" href="https://www.facebook.com/craig.wells.3152" target="_blankS"><img height="28" width="28" src="images/facebook.png" alt="Facebook"/></a>
+							<a class="twitter-icon" href="javascript:void(0)"><img height="28" width="28" src="images/twitter.png" alt="Twitter"/></a>
+							<a class="linkedin-icon" href="javascript:void(0)"><img height="28" width="28" src="images/linkedin.png" alt="LinkedIn"/></a>
+						</div>	
+				</div>
+				<nav class="home">
+					<div id="three-lines">
+						<a href="javascript:void(0)">&#8801;</a>
+					</div>
+					<ul id="nav-items" class="{{page.navClass}}">
+
+						<li class="nav-item home"><a href="#" class="nav-link">Home</a></li>
+						<li class="nav-item about"><a href="about" class="nav-link">About</a></li>
+						<li class="nav-item projects"><a href="projects" class="projects nav-link">Projects</a></li>
+						<li class="features-nav-item nav-item features">
+							<a href="javascript:void(0)" class="nav-link"><div id="features-text"><div id="feature-text">Features </div><div id="down-icon">&#9662;</div></div></a>
+						</li>
+						<li>	
+							<ul id="features-dropdown">
+								<li class="features-item">
+									<a href="features/tools" class="features">
+										<div class="tools" ng-switch="page.subSelected">
+											<span ng-switch-when="tools">Tools &amp; resources &nbsp; &#10003;</span>
+											<span ng-switch-default>Tools &amp; resources</span>
+										</div>
+									</a>
+								</li>
+								<li class="features-item">
+									<a href="features/patterns" class="features">
+										<div class="patterns" ng-switch="page.subSelected">
+											<span ng-switch-when="patterns">Design patterns &nbsp; &#10003;</span>
+											<span ng-switch-default>Design patterns &nbsp;</span>
+										</div>
+									</a>
+								</li>	
+							</ul>	
+						</li>
+						<li class="nav-item blog"><a href="blog" class="blog nav-link"><div>Blog</div></a></li>
+						<li class="nav-item contact"><a href="contact" class="contact nav-link"><div>Contact</div></a></li>
+					</ul>
+				</nav>
+		</div>	<!-- end of header -->
+	  <div id="main">
+	    <div ng-view class="template-holder"></div>
+	  </div>
+	</div> <!-- end of content -->
+	<div id="footer">
+		<ul id="footer-1">
+			<li class="footer-item"><a href="#">Home</a></li>
+			<li class="footer-item"><a href="about">About</a></li>
+			<li class="footer-item"><a href="projects">Projects</a></li>
+			<li class="footer-item"><a href="blog">Blog</a></li>
+			<li class="footer-item"><a href="contact">Contact</a></li>
+		</ul>
+		<ul id="footer-2">
+			<li class="footer-item"><a href="features/tools">Tools &amp; resources</a></li>
+			<li class="footer-item"><a href="features/patterns">Design patterns</a></li>
+		</ul>
+		<div id="footer-3">
+			<div id="footer-icons">
+				<div id="linkedin-footer"><a href="#"><img height="28" width="28" src="images/linkedin-white.png" alt="linkedin"/></a></div>
+				<div id="twitter-footer"><a href="#"><img height="28" width="28" src="images/twitter-white.png" alt="Twitter"/></a></div>
+				<div id="facebook-footer"><a target="_blank" href="https://www.facebook.com/craig.wells.3152"><img height="28" width="28" src="images/facebook-white.png" alt="Facebook"/></a></div>
+			</div>
+		</div>
+		<div id="footer-4"><div id="footer-name">craigwells.xyz</div></div>
+	</div>	
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/toggle.js"></script>
