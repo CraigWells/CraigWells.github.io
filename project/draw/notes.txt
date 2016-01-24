@@ -1,0 +1,14 @@
+notes:
+
+- cross browser compatibility
+- (detect browser for download function compatibility)
+
+- responsive design
+- share popup
+- encapsulate code in closure
+
+
+
+
+- paintnpost.com
+
