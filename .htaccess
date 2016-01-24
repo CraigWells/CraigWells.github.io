@@ -11,3 +11,4 @@ RewriteRule $project/backgrounds projects/backgrounds
 RewriteRule $project/weather projects/weather
 RewriteRule $project/skillschart projects/skillschart
 RewriteRule $project/graphs projects/graphs
+RewriteRule $project/draw projects/draw
