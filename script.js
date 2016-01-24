@@ -92,6 +92,15 @@
 	.controller('projectsController', function($scope) {
 		$scope.message = 'Projects here.';
 		$scope.projects = [
+
+			{
+				title : "Canvas Draw",
+				subHeading : "A HTML5 Canvas drawing tool",
+				textContent : "kjdheafhoef kjfwebf oiwe jf qwofio oweif wefoi oq fswki weo",
+				link : "project/draw/",
+				linkText : "read more",
+				imgSrc : "./images/information.png"
+			},
 			{
 				title : "Javascript Blog Editor",
 				subHeading : "A client-side alternative",
